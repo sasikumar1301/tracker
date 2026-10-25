@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "DailyBudget",
+    "slug": "dailybudget",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "dailybudget",
+    "userInterfaceStyle": "automatic",
+    "android": {
+      "package": "com.yourname.dailybudget",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#F4B942",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": true
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow DailyBudget to read the screenshots you choose for local transaction import.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#E9A91C"
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Allow DailyBudget to use device authentication to unlock your local budget."
+        }
+      ],
+      "expo-sharing"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
